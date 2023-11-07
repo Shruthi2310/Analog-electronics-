@@ -1,0 +1,10 @@
+VDD = 18  
+IDSS = 6e-3  
+VGS = -5  
+VDS = VDD / 2  
+RD = VDS / IDSS  
+VGS_OFF = VGS  
+VG = VDD - IDSS * RD  
+print(f"Drain-to-Source Voltage (VDS): {VDS} V")
+print(f"Drain Resistance (RD): {RD} ohms")
+print(f"Gate Voltage (VG): {VG} V")
