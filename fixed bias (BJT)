@@ -1,0 +1,14 @@
+def solve_fixed_bias_bjt(Vcc, Rb, Rc, Beta, Vbe):
+    Ib = (Vcc - Vbe) / (Rb + ((Beta + 1) * Rc)
+    Ic = Beta * Ib
+    Vce = Vcc - Ic * Rc
+    return Ib, Ic, Vce
+Vcc = 15
+Rb = 4700
+Rc = 120
+Beta = 120
+Vbe = 0.7
+Ib, Ic, Vce = solve_fixed_bias_bjt(Vcc, Rb, Rc, Beta, Vbe)
+print(f"Base Current (Ib): {Ib} A")
+print(f"Collector current (Ic): {Ic} B")
+print(f"Collector-Emitter Voltage (Vce): {Vce} V"
