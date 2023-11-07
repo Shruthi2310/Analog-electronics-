@@ -1,0 +1,14 @@
+def solve_emitter_bias_bjt(Vcc, Re, Rb, Beta, Vbe):
+    Ib = (Vcc - Vbe) / (Re + (Beta + 1) * Rb)
+    Ic = Beta * Ib 
+    Vc = Vcc - Ic * Re
+    return Ib, Ic, Vc
+Vcc = 12
+Re = 560
+Rb = 220
+Beta = 100
+Vbe = 0.7
+Ib, Ic, Vc = solve_emiitter_bias_bjt(Vcc, Re, Rb, Beta, Vbe)
+print(f"Base current (Ib): {Ib} A")
+print(f"Collector current (Ic): {Ic} B")
+print(f"Collector Voltage (Vc): {Vc} V")
