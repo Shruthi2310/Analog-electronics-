@@ -1,0 +1,14 @@
+V_CC = 15  
+R1 = 1000  
+R2 = 2000  
+V_BE = 0.7  
+beta = 200  
+V_B = V_CC * R2 / (R1 + R2)  
+I_B = (V_CC - V_B) / (R1 + R2 + (beta + 1) * (R1 // R2))  
+I_C = beta * I_B  
+V_CE = V_CC - I_C * (R1 + R2)  
+print(f"Operating Point Analysis:")
+print(f"Base Voltage (V_B): {V_B} V")
+print(f"Base Current (I_B): {I_B} A")
+print(f"Collector Current (I_C): {I_C} A")
+print(f"Collector-Emitter Voltage (V_CE): {V_CE} V")
