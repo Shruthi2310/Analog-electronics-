@@ -1,0 +1,9 @@
+def mosfet_voltage_divider(v_in, r1, r2, beta):
+    v_out = v_in * (r2 / (r1 + r2)) * (1 / (1 + beta))
+    return v_out
+v_in = 5.0 
+r1 = 1000  
+r2 = 2000  
+beta = 0.9  
+result = mosfet_voltage_divider(v_in, r1, r2, beta)
+print("Output voltage is:", result, "volts")
